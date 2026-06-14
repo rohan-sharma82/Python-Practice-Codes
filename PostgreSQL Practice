@@ -1,0 +1,32 @@
+--INSERTING VALUES FROM ONE TABLE TO ANOTHER
+create table nma_custo(
+	name varchar,
+	country varchar,
+	scores integer,
+	age integer,
+	occupation varchar
+)
+
+
+select * from nma_custo
+
+insert into nma_custo(name,country,scores,age,occupation)
+values
+	('jatt','india',89,43,'at_home'),
+	('ruhi','usa',83,28,'at_home')
+
+insert into customers(name,country,scores)
+select name,country,scores from nma_custo 
+
+
+-----------------------------------------
+
+
+select * from customers
+
+--UPDATING THE VALUES FROM THE TABLE
+
+update customers set name='rohan'
+where name='jatt'
+
+SELECT * FROM CUSTOMERS
